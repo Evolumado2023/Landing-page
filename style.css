@@ -1,0 +1,614 @@
+.body1 {
+    background-color: black;
+}
+.container {
+    width: 1200px !important;
+    padding: 0 !important;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+/* botão */
+.btn-next {
+    display: inline-block;
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .btn-next a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  .btn-next:hover {
+    background-color: #0056b3;
+  }
+
+
+
+
+
+@media screen and (min-width: 992px) and (max-width: 1439px) {
+    .container {
+        max-width: 1279px !important;
+        padding: 0 !important;
+        margin: 0 80px !important;
+        width: auto !important;
+   }
+}
+@media screen and (max-width: 991px) {
+    .container {
+        max-width: 959px !important;
+        margin: 0 16px !important;
+        padding: 0 !important;
+        width: auto !important;
+   }
+}
+.gradient-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+    padding: 30px;
+}
+@media screen and (max-width: 991px) {
+    .gradient-cards {
+        grid-template-columns: 1fr;
+   }
+}
+.container-title {
+    text-align: center;
+    padding: 0 !important;
+    margin-bottom: 40px;
+    font-size: 40px;
+    color: #fff;
+    font-weight: 600;
+    line-height: 60px;
+}
+.card {
+    max-width: 550px;
+    border: 0;
+    width: 100%;
+    margin-inline: auto;
+}
+.container-card {
+    position: relative;
+    border: 2px solid transparent;
+    background: linear-gradient(71deg, #080509, #1a171c, #080509);
+    background-clip: padding-box;
+    border-radius: 45px;
+    padding: 40px;
+}
+.container-card img {
+    margin-bottom: 32px;
+}
+.bg-green-box, .bg-white-box, .bg-yellow-box, .bg-blue-box {
+    position: relative;
+}
+.bg-green-box::after, .bg-white-box::after, .bg-yellow-box::after, .bg-blue-box::after {
+    position: absolute;
+    top: -1px;
+    bottom: -1px;
+    left: -1px;
+    right: -1px;
+    content: "";
+    z-index: -1;
+    border-radius: 45px;
+}
+.bg-green-box::after {
+    background: linear-gradient(71deg, #0d1212, #3da077, #0d1212);
+}
+.bg-white-box::after {
+    background: linear-gradient(71deg, #121013, #b0afb0, #121013);
+}
+.bg-yellow-box::after {
+    background: linear-gradient(71deg, #110e0e, #afa220, #110e0e);
+}
+.bg-blue-box::after {
+    background: linear-gradient(71deg, #0c0a0e, #5f6fad, #0c0a0e);
+}
+.card-title {
+    font-weight: 600;
+    color: white;
+    letter-spacing: -0.02em;
+    line-height: 40px;
+    font-style: normal;
+    font-size: 28px;
+    padding-bottom: 8px;
+}
+.card-description {
+    font-weight: 600;
+    line-height: 32px;
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 16px;
+    max-width: 470px;
+}
+
+
+/*   SEGUNDA PARTE */
+@import url("https://pro.fontawesome.com/releases/v6.0.0-beta1/css/all.css");
+@import url("https://fonts.googleapis.com/css2?family=Exo+2:wght@300;500;700&display=swap");
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.body2 {
+  --color: rgba(30, 30, 30);
+  --bgColor: rgba(245, 245, 245);
+  min-height: 100vh;
+  display: grid;
+  align-content: center;
+  gap: 2rem;
+  padding: 2rem;
+  font-family: "Exo 2", sans-serif;
+  color: var(--color);
+  background: var(--bgColor);
+}
+
+h1 { text-align: center }
+
+ol {
+  width: min(60rem, 90%);
+  margin-inline: auto;
+
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+
+  list-style: none;
+  counter-reset: stepnr;
+}
+
+li:nth-child(6n + 1) { --accent-color: #b8df4e }
+li:nth-child(6n + 2) { --accent-color: #4cbccb }
+li:nth-child(6n + 3) { --accent-color: #7197d3 }
+li:nth-child(6n + 4) { --accent-color: #ae78cb }
+li:nth-child(6n + 5) { --accent-color: #7dc7a4 }
+li:nth-child(6n + 6) { --accent-color: #f078c2 }
+
+ol li {
+  counter-increment: stepnr;
+  width: 18rem;
+  --borderS: 2rem;
+  aspect-ratio: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: calc(var(--borderS) + 2rem);
+  position: relative;
+}
+ol li::before,
+ol li::after {
+  inset: 0;
+  position: absolute;
+  border-radius: 50%;
+  border: var(--borderS) solid var(--bgColor);
+  line-height: 1.1;
+}
+ol li::before {
+  content: counter(stepnr);
+  color: var(--accent-color);
+  padding-left: 10rem;
+  font-size: 12rem;
+  font-weight: 700;
+  overflow: hidden;
+}
+
+ol li::after {
+  content: "";
+  filter: drop-shadow(-0.25rem 0.25rem 0.0675rem rgba(0, 0, 0, 0.75)) blur(5px);
+}
+
+ol li > * { width: 7.5rem }
+ol li .icon { font-size: 2rem; color: var(--accent-color); text-align: center }
+ol li .title { font-size: 2rem; font-weight: 500 }
+ol li .descr { font-size: 0.8rem; font-weight: 300 }
+
+.credits { margin-top: 2rem; text-align: right }
+.credits a { color: var(--color) }
+
+
+
+/* TERCEIRA  */
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Montserrat:wght@700&display=swap");
+
+:root {
+  /* Colors */
+  --brand-color: hsl(46, 100%, 50%);
+  --black: hsl(0, 0%, 0%);
+  --white: hsl(0, 0%, 100%);
+  /* Fonts */
+  --font-title: "Montserrat", sans-serif;
+  --font-text: "Lato", sans-serif;
+}
+
+/* RESET */
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+.body3,
+h2,
+p {
+  margin: 0;
+}
+
+/* GLOBAL STYLES */
+body {
+  display: grid;
+  place-items: center;
+  height: 100vh;
+}
+
+h2 {
+  font-size: 2.25rem;
+  font-family: var(--font-title);
+  color: var(--white);
+  line-height: 1.1;
+}
+
+p {
+  font-family: var(--font-text);
+  font-size: 1rem;
+  line-height: 1.5;
+  color: var(--white);
+}
+
+.flow > * + * {
+  margin-top: var(--flow-space, 1em);
+}
+
+/* CARD COMPONENT */
+
+.card {
+  display: grid;
+  place-items: center;
+  width: 80vw;
+  max-width: 21.875rem;
+  height: 28.125rem;
+  overflow: hidden;
+  border-radius: 0.625rem;
+  box-shadow: 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.25);
+}
+
+.card > * {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+}
+
+.card__background {
+  object-fit: cover;
+  max-width: 100%;
+  height: 100%;
+}
+
+.card__content {
+  --flow-space: 0.9375rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-self: flex-end;
+  height: 55%;
+  padding: 12% 1.25rem 1.875rem;
+  background: linear-gradient(
+    180deg,
+    hsla(0, 0%, 0%, 0) 0%,
+    hsla(0, 0%, 0%, 0.3) 10%,
+    hsl(0, 0%, 0%) 100%
+  );
+}
+
+.card__content--container {
+  --flow-space: 1.25rem;
+}
+
+.card__title {
+  position: relative;
+  width: fit-content;
+  width: -moz-fit-content; /* Prefijo necesario para Firefox  */
+}
+
+.card__title::after {
+  content: "";
+  position: absolute;
+  height: 0.3125rem;
+  width: calc(100% + 1.25rem);
+  bottom: calc((1.25rem - 0.5rem) * -1);
+  left: -1.25rem;
+  background-color: var(--brand-color);
+}
+
+.card__button {
+  padding: 0.75em 1.6em;
+  width: fit-content;
+  width: -moz-fit-content; /* Prefijo necesario para Firefox  */
+  font-variant: small-caps;
+  font-weight: bold;
+  border-radius: 0.45em;
+  border: none;
+  background-color: var(--brand-color);
+  font-family: var(--font-title);
+  font-size: 1.125rem;
+  color: var(--black);
+}
+
+.card__button:focus {
+  outline: 2px solid black;
+  outline-offset: -5px;
+}
+
+@media (any-hover: hover) and (any-pointer: fine) {
+  .card__content {
+    transform: translateY(62%);
+    transition: transform 500ms ease-out;
+    transition-delay: 500ms;
+  }
+
+  .card__title::after {
+    opacity: 0;
+    transform: scaleX(0);
+    transition: opacity 1000ms ease-in, transform 500ms ease-out;
+    transition-delay: 500ms;
+    transform-origin: right;
+  }
+
+  .card__background {
+    transition: transform 500ms ease-in;
+  }
+
+  .card__content--container > :not(.card__title),
+  .card__button {
+    opacity: 0;
+    transition: transform 500ms ease-out, opacity 500ms ease-out;
+  }
+
+  .card:hover,
+  .card:focus-within {
+    transform: scale(1.05);
+    transition: transform 500ms ease-in;
+  }
+
+  .card:hover .card__content,
+  .card:focus-within .card__content {
+    transform: translateY(0);
+    transition: transform 500ms ease-in;
+  }
+
+  .card:focus-within .card__content {
+    transition-duration: 0ms;
+  }
+
+  .card:hover .card__background,
+  .card:focus-within .card__background {
+    transform: scale(1.3);
+  }
+
+  .card:hover .card__content--container > :not(.card__title),
+  .card:hover .card__button,
+  .card:focus-within .card__content--container > :not(.card__title),
+  .card:focus-within .card__button {
+    opacity: 1;
+    transition: opacity 500ms ease-in;
+    transition-delay: 1000ms;
+  }
+
+  .card:hover .card__title::after,
+  .card:focus-within .card__title::after {
+    opacity: 1;
+    transform: scaleX(1);
+    transform-origin: left;
+    transition: opacity 500ms ease-in, transform 500ms ease-in;
+    transition-delay: 500ms;
+  }
+}
+
+
+
+/* BODY 5*/
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+  }
+  
+  :root {
+    --purple: hsl(240, 80%, 89%);
+    --pink: hsl(0, 59%, 94%);
+    --light-bg: hsl(204, 37%, 92%);
+    --light-gray-bg: hsl(0, 0%, 94%);
+    --white: hsl(0, 0%, 100%);
+    --dark: hsl(0, 0%, 7%);
+    --text-gray: hsl(0, 0%, 30%);
+  }
+  
+  .body4 {
+    background: var(--light-bg);
+    font-family: "Space Grotesk", sans-serif;
+    color: var(--dark);
+  }
+  
+  h3 {
+    font-size: 1.5em;
+    font-weight: 700;
+  }
+  
+  p {
+    font-size: 1em;
+    line-height: 1.7;
+    font-weight: 300;
+    color: var(--text-gray);
+  }
+  
+  .description {
+    white-space: wrap;
+  }
+  
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  .wrap {
+    display: flex;
+    justify: space-between;
+    align-items: stretch;
+    width: 100%;
+    gap: 24px;
+    padding: 24px;
+    flex-wrap: wrap;
+  }
+  
+  .box {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%;
+    position: relative;
+    padding: 24px;
+    background: #fff;
+  }
+  
+  .box-top {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    gap: 12px;
+    margin-bottom: 36px;
+  }
+  
+  .box-image {
+    width: 100%;
+    height: 360px;
+    object-fit: cover;
+    object-position: 50% 20%;
+  }
+  
+  .title-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .box-title {
+    border-left: 3px solid var(--purple);
+    padding-left: 12px;
+  }
+  
+  .user-follow-info {
+    color: hsl(0, 0%, 60%);
+  }
+  
+  .button {
+    display: block;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: auto;
+    padding: 16px;
+    color: #000;
+    background: transparent;
+    box-shadow: 0px 0px 0px 1px black inset;
+    transition: background 0.4s ease;
+  }
+  
+  .button:hover {
+    background: var(--purple);
+  }
+  
+  .fill-one {
+    background: var(--light-bg);
+  }
+  
+  .fill-two {
+    background: var(--pink);
+  }
+  
+  /* RESPONSIVE QUERIES */
+  
+  @media (min-width: 320px) {
+    .title-flex {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: start;
+    }
+    .user-follow-info {
+      margin-top: 6px;
+    }
+  }
+  
+  @media (min-width: 460px) {
+    .title-flex {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: start;
+    }
+    .user-follow-info {
+      margin-top: 6px;
+    }
+  }
+  
+  @media (min-width: 640px) {
+    .box {
+      flex-basis: calc(50% - 12px);
+    }
+    .title-flex {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: start;
+    }
+    .user-follow-info {
+      margin-top: 6px;
+    }
+  }
+  
+  @media (min-width: 840px) {
+    .title-flex {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: start;
+    }
+    .user-follow-info {
+      margin-top: 6px;
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .box {
+      flex-basis: calc(33.3% - 16px);
+    }
+    .title-flex {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: start;
+    }
+    .user-follow-info {
+      margin-top: 6px;
+    }
+  }
+  
+  @media (min-width: 1100px) {
+    .box {
+      flex-basis: calc(25% - 18px);
+    }
+  }
